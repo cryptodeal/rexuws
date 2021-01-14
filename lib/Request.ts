@@ -245,6 +245,11 @@ export default class Request implements IRequest {
     return this._params;
   }
 
+  //TODO: Add setter function for params()
+  set params(data: Record<string, string>) {
+    this._params = data;
+  }
+
   get ip(): string {
     return textDecoder.decode(this[FROM_RES].getRemoteAddressAsText());
   }
