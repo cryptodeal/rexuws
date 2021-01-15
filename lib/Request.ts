@@ -241,11 +241,12 @@ export default class Request implements IRequest {
             return acc;
           }, {} as Record<string, string>)
         : {};
-
+    console.log(this._params)
     return this._params;
   }
-
-  //TODO: Add setter function for params()
+/**
+ * Custom implementation of setter req.params
+ */
   set params(data: Record<string, string>) {
     this._params = data;
   }
